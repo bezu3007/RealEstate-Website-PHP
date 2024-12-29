@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css"/>
+        <title>find</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">ARARAT REAL ESTATES</a></div>
+                <ui class="links">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="find.php">Find</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                </ui>
+                <a href="signup.php" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="find.php">Find</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="signup.php" class="action_btn">Get Started</a></li>
+            </div>
+            <script>
+                const toggleBtn=document.querySelector('.toggle_btn')
+                const toggleBtnIcon=document.querySelector('.toggle_btn i')
+                const dropDownMenu=document.querySelector('.dropdown_menu')
+    
+                toggleBtn.onclick = function (){
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('open')
+    
+                    toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+                }
+            </script>
+        </header>
+        <br>
+    <table id="vid" width="100%" >
+        <tr>
+            <td align="center">
+                <video width="900px" controls muted autoplay>
+                    <source src="view.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                    <source src="view.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <br><br>
+        <footer>
+            <table class="footer">
+                <tr>
+                    <td>
+                        <p>ARARAT REAL ESTATES&copy;2023.All rights reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </body>
+</html>

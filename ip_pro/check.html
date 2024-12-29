@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css"/>
+        <title>index</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">ARARAT REAL ESTATES</a></div>
+                <ui class="links">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="abt">About</a></li>
+                    <li><a href="ser">Services</a></li>
+                    <li><a href="contact">Contact Us</a></li>
+                </ui>
+                <a href="#" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="abt">About</a></li>
+                <li><a href="ser">Services</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                    <li><a href="#" class="action_btn">Get Started</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>WELCOME</h1>
+                <p>There is no place like HOME</p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn=document.querySelector('.toggle_btn')
+            const toggleBtnIcon=document.querySelector('.toggle_btn i')
+            const dropDownMenu=document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function (){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    <div>
+        <table border="2" id="findbox" cellspacing="0" cellpadding="4px" width="25%" align="center">
+            <tr>
+                <td><a href="find.html">
+                        Find your next home
+                    </a></td>
+            </tr>
+        </table>
+    </div>
+    <table class="main" cellspacing="10px" cellpadding="4px" align="center">
+        <tr>
+            <td>
+                <p align="center">
+                     WELCOME to your new home.
+                </p>
+                <p>
+                If you are searching for a home with full of tranquil and peaceful life you are in the right place. Our project lies at the beautiful city Debre Zeit.
+                    It's a nearby city to Addis Ababa and also there is a different type of transportation systems; like bus, taxi, train (Addis Ababa - Diredawa) and so on.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    To find home please 
+                    <a href="login.html" id="login_link">click here</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <table id="subbox" cellpadding="20px" align="center">
+        <tr>
+            <td>
+                <p class="p1"><b>Subscribe</b></p>
+                <p style="font-size: 20px;">for updated information</p>
+                <form>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="submit" id="subbtn" value="Subscribe">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    
+    <div class="image">
+        <img class="image_img" src="https://lh4.googleusercontent.com/Hl3kVfxsCV4sL5wALnDzidey8YfpmqDMLM8xH_frqdpjqV-tazI5Q_2Fl7w9DVgFRJqiMkwfeyJ2lcsj8LG--9L8wH-_5zJJYvpoi-RM3ddIHr3wBrRIFAyze42N4V_gQICrEX7c" alt="atmosphere" />
+        <div class="image_overlay">
+            <div class="image_title">About us</div>
+            <p class="image_desc">The building will construct by high quality construction material which made by our team in our country with latest and amenities that spell class.
+                Your new home sweet home will have a beautiful flooring, doors, windows, walling and ceiling which reflects ethiopianism.</p>
+        </div>
+    </div>
+    <div class="image">
+        <img class="image_img" src="https://waterpartnership.org.au//wp-content/uploads/2017/02/howtotakethe.jpg" alt="equipment" />
+        <div class="image_overlay">
+            <div class="image_title">Water and Power Supply System</div>
+            <p class="image_desc">
+                Considering that water supply and power supply in Debre Zeit are unstable, internal water and power supply systems are specially set in house, namely, 
+                well and power generation equipment are self-equipped to guarantee 24/7 power supply to enhance your life quality in an all-round way.
+            </p>
+        </div>
+    </div>
+    <div class="image">
+        <img class="image_img" src="https://www.greatschools.org/gk/wp-content/uploads/2014/03/The-school-visit-what-to-look-for-what-to-ask-1.jpg" alt="personal trainer" />
+        <div class="image_overlay">
+            <div class="image_title">Schooling</div>
+            <p class="image_desc">
+                The best and leading schools in town a walking distance from our Compound.
+                For both kindergarten, elementary and secondary school.
+            </p>
+        </div>
+    </div>
+    <div class="image">
+        <img class="image_img" src="https://www.securityworldmarket.com/Renderers/showmedia.ashx?id=MediaArchive:d10538fa-12c1-4bb8-8398-3e6936fb55d1" alt="personal trainer" />
+        <div class="image_overlay">
+            <div class="image_title">Security</div>
+            <p class="image_desc">The thing that makes our project special from other real estate project is our security. 
+                There will be 24/7security from entrance to the complex, CCTV cameras, alert security guards everywhere. 
+                There will be an exit door in case of emergency.
+            </p>
+        </div>
+    </div>
+    
+    <div class="image">
+        <img class="image_img" src="https://t3.ftcdn.net/jpg/04/82/46/38/360_F_482463891_uJuzvYactOunswRlNdWlh1PZi5vQXRId.jpg" />
+        <div class="image_overlay">
+            <div class="image_title">First-AID and Hospitality</div>
+            <p class="image_desc">
+                We have doctors incase of emergency in our compound.<br>
+                The leading private hospitals are a walking distance from our compound;furthermore we have Shopping and restaurants, 
+                fresh corners and bakery in nearby.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <table class="footer">
+            <tr>
+                <td>
+                    <p>ARARAT REAL ESTATES&copy;2023.All rights reserved.</p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+    </body>
+</html>
+
+
+<div class="about">
+    <section id="a1" onmouseover="overta1()" onmouseout="outta1()">
+    </section>
+    <section id="a2">
+
+    </section>
+    <section id="a3">
+
+    </section>
+</div>
+
+<table class="main" width="75%" align="center">
+    <tr>
+        <td>
+            <p>The building will construct by high quality construction material which made by our team in our country with latest and amenities that spell class.
+                Your new home sweet home will have a beautiful flooring, doors, windows, walling and ceiling which reflects ethiopianism.
+            </p>
+            <h2>Water and Power Supply System </h2>
+
+            <p>Considering that water supply and power supply in Debre Zeit are unstable, internal water and power supply systems are specially set in house, namely, well and power generation equipment are self-equipped to guarantee 24/7 power supply to enhance your life quality in an all-round way.</p>
+
+            <h2>Schooling</h2>
+            <p>The best and leading schools in town a walking distance from our Compound.
+                For both kindergarten, elementary and secondary school.</p>
+            <h2>Security</h2>
+            <p>The thing that makes our project special from other real estate project is our security.There will be 24/7security from entrance to the complex, CCTV cameras, alert security guards everywhere.there will be an exit door in case of emergency.
+            </p>
+            <h2>Hospitals</h2>
+            <p>The leading private hospitals are a walking distance from our compound;furthermore we have Shopping and restaurants, fresh corners and bakery in nearby.</p>
+        </td>
+    </tr>
+</table>

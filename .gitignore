@@ -1,0 +1,36 @@
+# Composer dependencies
+/vendor/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# IDE configurations
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+/.vscode/
+
+# PHPStorm specific files
+*.iml
+
+# Cache and session files
+/cache/*
+/session/*
+
+# Build directories
+/public/build/
+/public/storage/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# PHPUnit files
+phpunit.xml
+phpunit.xml.dist
+
+# Coverage reports
+coverage/

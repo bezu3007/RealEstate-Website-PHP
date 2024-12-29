@@ -1,0 +1,13 @@
+
+        <table id="gallery" width="80%" align="center" cellspacing="10px" cellpadding="10px">
+            <tr align="center">
+                <td>
+                    <img src="picc.jpg" width="100%" alt="surrounding area"/>
+                </td>
+            </tr>
+            <tr align="center">  
+                <td>
+                    <img src="day_2.jpg" width="100%"/>
+                </td>
+            </tr>
+        </table><br><br>
