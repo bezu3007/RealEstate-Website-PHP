@@ -106,9 +106,17 @@ We welcome contributions from the community to improve this project. Please foll
 
 
 ## ScreenShots
+Here are some screenshots:
 
+![screenshot 1](images/photo_2024-12-29_21-43-33.jpg)
 
+![screenshot 2](images/photo_2024-12-29_21-45-27.jpg)
 
+![screenshot 3](images/photo_2024-12-29_21-46-36.jpg)
+
+![screenshot 4](images/photo_2024-12-29_21-46-55.jpg)
+
+![screenshot 5](images/photo_2024-12-29_21-47-01.jpg)
 
 ---
 
