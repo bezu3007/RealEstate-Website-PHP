@@ -140,7 +140,9 @@ Examples of unacceptable behaviors:
 ### Responsibilities of Maintainers
 Project maintainers are responsible for ensuring compliance with this code of conduct. Instances of inappropriate behavior will be reviewed, and necessary actions (such as warnings, bans, or removal) will be taken.
 
+Please read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
 ---
+
 
 ## License
 
