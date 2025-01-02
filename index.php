@@ -220,10 +220,7 @@ include "commons/DB_connector.php";
                     </div>
 
                     <div>
-                        <!--                        <img-->
-                        <!--                                src="images/beans.jpg"-->
-                        <!--                                height="220"-->
-                        <!--                        />-->
+                        
                         <span class="feature__subtitle">
                     <h4 class="feature-title">Brand</h4>
                     <p class="feature-description">
@@ -253,33 +250,6 @@ include "commons/DB_connector.php";
             </div>
         </div>
 
-        <!-- Team -->
-        
-<!--                <div class="team-member">-->
-<!--                    <img src="images/unnamed.jpg" width="200"/>-->
-<!--                    <p class="title">Birhanu Worku</p>-->
-<!--                    <p class="subtitle">Front End Engineer</p>-->
-<!--                </div>-->
-<!--                <div class="team-member">-->
-<!--                    <img src="images/unnamed.jpg" width="200"/>-->
-<!--                    <p class="title">Biruk Mesfin</p>-->
-<!--                    <p class="subtitle">System Designer</p>-->
-<!--                </div>-->
-<!--                <div class="team-member">-->
-<!--                    <img src="images/unnamed.jpg" width="200"/>-->
-<!--                    <p class="title">Bisrat Kebere</p>-->
-<!--                    <p class="subtitle">Product Manager</p>-->
-<!--                </div>-->
-<!--                <div class="team-member">-->
-<!--                    <img src="images/unnamed.jpg" width="200"/>-->
-<!--                    <p class="title">Biyaol Mesay</p>-->
-<!--                    <p class="subtitle">Graphics Designer</p>-->
-<!--                </div>-->
-<!--                <div class="team-member">-->
-<!--                    <img src="images/unnamed.jpg" width="200"/>-->
-<!--                    <p class="title">Dagim Tezerawork</p>-->
-<!--                    <p class="subtitle">Pentester</p>-->
-<!--                </div>-->
             </div>
         </div>
 
