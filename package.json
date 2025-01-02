@@ -1,0 +1,17 @@
+{
+  "name": "realestate-website-php",
+  "version": "1.0.0",
+  "description": "The Ararat Real Estate Project is a web application designed to streamline property management and facilitate real estate transactions for Ararat, a leading real estate company. The platform caters to two types of users:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}

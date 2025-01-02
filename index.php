@@ -1,3 +1,5 @@
+<link href="./CSS/output.css" rel="stylesheet">
+
 <?php
 include "commons/DB_connector.php";
 ?>

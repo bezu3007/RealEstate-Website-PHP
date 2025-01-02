@@ -1,164 +1,105 @@
-<style>
-    .profile-picture {
-        width: 50px; /* Set the width of the profile picture container */
-        height: 50px; /* Set the height of the profile picture container */
-        overflow: hidden; /* Hide any part of the image that exceeds the container size */
-        border-radius: 50%; /* Make the profile picture round */
-        margin-right: 10px; /* Add some space to the right of the profile picture */
-    }
-
-    .profile-picture img {
-        max-width: 100%; /* Set the maximum width of the image to the container width */
-        max-height: 100%; /* Set the maximum height of the image to the container height */
-        object-fit: cover; /* Scale the image to cover the entire container */
-    }
-</style>
+<link href="../CSS/output.css" rel="stylesheet">
 <header>
-    <div class="container">
-        <div class="brand">
-            <div class="logo">
-                <?php
-                if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                    <a href="index.php">
-                        <img src="img/icons/online_shopping.png">
-                        <div class="logo-text">
-                            <p class="big-logo">ARARAT</p>
-                            <p class="small-logo">REAL STATES</p>
+    <div class="container mx-auto px-4">
+        <!-- Brand Section -->
+        <div class="brand flex items-center justify-between">
+            <div class="logo flex items-center">
+                <?php if (basename(dirname($_SERVER['PHP_SELF'])) === "ip1") { ?>
+                    <a href="index.php" class="flex items-center">
+                        <img src="img/icons/online_shopping.png" class="w-6 h-6 sm:w-5 sm:h-5" alt="Logo">
+                        <div class="logo-text ml-2">
+                            <p class="text-lg sm:text-md font-semibold">ARARAT</p>
+                            <p class="text-sm sm:text-xs text-gray-500">REAL STATES</p>
                         </div>
                     </a>
-                    <?php }
-                else if (basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                    <a href="../index.php">
-                        <img src="../img/icons/online_shopping.png">
-                        <div class="logo-text">
-                            <p class="big-logo">ARARAT</p>
-                            <p class="small-logo">REAL STATES</p>
+                <?php } else { ?>
+                    <a href="../index.php" class="flex items-center">
+                        <img src="../img/icons/online_shopping.png" class="w-6 h-6 sm:w-5 sm:h-5" alt="Logo">
+                        <div class="logo-text ml-2">
+                            <p class="text-lg sm:text-md font-semibold">ARARAT</p>
+                            <p class="text-sm sm:text-xs text-gray-500">REAL STATES</p>
                         </div>
                     </a>
-              <?php  }
-                ?>
-            </div> <!-- logo -->
-            <div class="shop-icon">
-                <div class="dropdown">
-                    <?php
-                    if (session_status() === PHP_SESSION_NONE) {
-                        @session_start();
-                    }
-                    if (isset($_SESSION['logged_in'])&& $_SESSION['logged_in']){
-                    ?>
-                    <div class="profile-picture">
-                        <?php
-                        if (!empty($_SESSION['user_details']['Profile_picture'])){
-                            if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                                <a href="pages/account.php"><img src="<?php echo $_SESSION['user_details']['Profile_picture'];?>" alt="Profile Picture"></a>
-                            <?php }
-                            else if(basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                                 <a href="pages/account.php"><img src="../<?php echo $_SESSION['user_details']['Profile_picture'];?>" alt="Profile Picture"></a>
-                           <?php }
-                            ?>
-                        <?php }
-                        if (empty($_SESSION['user_details']['Profile_picture'])){
-                            if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                                <img src="img/icons/account.png" alt="Profile Picture">
-                           <?php }
-                            else if (basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                                <img src="../img/icons/account.png" alt="Profile Picture">
-                           <?php }
-                            ?>
+                <?php } ?>
+            </div>
 
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="dropdown-menu wishlist-item">
-                        <?php
-
-                        echo "<h1 style='color: blue'>".$_SESSION['user_details']['username']."</h1>";
-                        echo "<h1 style='color: green'>".$_SESSION['user_details']['Email']."</h1>";
-                        ?>
-                        <ul>
+            <!-- Shop Icons -->
+            <div class="shop-icon flex items-center space-x-4">
+                <!-- Profile Picture Dropdown -->
+                <div class="dropdown relative">
+                    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
+                        <div class="profile-picture w-10 h-10 rounded-full overflow-hidden cursor-pointer hover:shadow-lg">
                             <?php
-                            if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                                <li><a href="pages/account.php">My Account</a></li>
-                                <li><a href="pages/orders.php">My Orders</a></li>
-                                <li><a href="functions/userLogout.php">Log Out</a></li>
-                                <?php }
-                            else if (basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                                <li><a href="../pages/account.php">My Account</a></li>
-                                <li><a href="../pages/orders.php">My Orders</a></li>
-                                <li><a href="../functions/userLogout.php">Log Out</a></li>
-                    <?php }
-                            }          ?>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <?php
-                    if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                        <img src="img/icons/shopping_cart.png">
-                    <div class="dropdown-menu">
-                       <button style="color: green"> <a href="pages/cart.php"> Go To Cart</a></button>
-                    </div>
-                   <?php }
-                    else if (basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                        <img src="../img/icons/shopping_cart.png">
-                    <div class="dropdown-menu">
-                       <button style="color: green"> <a href="../pages/cart.php"> Go To Cart</a></button>
-                    </div>
-                  <?php  }
-                    ?>
-
-                </div>
-            </div> <!-- shop icons -->
-        </div> <!-- brand -->
-
-        <div class="menu-bar">
-            <div class="menu">
-                <ul>
-                    <?php
-                    if (basename(dirname($_SERVER['PHP_SELF']))==="ip1"){ ?>
-                       <li><a href="index.php">HOME</a></li>
-                    <li><a href="pages/market.php">Market</a></li>
-                    <li><a href="pages/register.php">Register</a></li>
-                    
-                    <?php
-                    if (!isset($_SESSION['logged_in'])){
-                    ?>
-                    <li><a href="pages/login.php">SIGN IN</a></li>
-                    <?php } ?>
-                   <?php }
-                    else if (basename(dirname($_SERVER['PHP_SELF']))!=="ip1"){ ?>
-                        <li><a href="../index.php">HOME</a></li>
-                        <li><a href="../pages/market.php">Market</a></li>
-                        <li><a href="../pages/register.php">Register</a></li>
-                        
-                        <?php
-                        if (!isset($_SESSION['logged_in'])){
+                            $profileSrc = !empty($_SESSION['user_details']['Profile_picture']) ? $_SESSION['user_details']['Profile_picture'] : 
+                                (basename(dirname($_SERVER['PHP_SELF'])) === 'ip1' ? 'img/icons/account.png' : '../img/icons/account.png');
                             ?>
-                            <li><a href="../pages/login.php">SIGN IN</a></li>
-                        <?php } ?>
-                        <?php
-                        }
-                    ?>
+                            <img src="<?php echo basename(dirname($_SERVER['PHP_SELF'])) === "ip1" ? $profileSrc : "../$profileSrc"; ?>" 
+                                class="w-full h-full object-cover" alt="Profile Picture">
+                        </div>
+                        <div class="dropdown-menu absolute mt-2 bg-white shadow-lg rounded-md p-4 hidden group-hover:block">
+                            <h1 class="text-blue-500"><?php echo $_SESSION['user_details']['username']; ?></h1>
+                            <h1 class="text-green-500"><?php echo $_SESSION['user_details']['Email']; ?></h1>
+                            <ul class="space-y-2">
+                                <?php if (basename(dirname($_SERVER['PHP_SELF'])) === "ip1") { ?>
+                                    <li><a href="pages/account.php" class="text-blue-500 hover:underline">My Account</a></li>
+                                    <li><a href="pages/orders.php" class="text-blue-500 hover:underline">My Orders</a></li>
+                                    <li><a href="functions/userLogout.php" class="text-red-500 hover:underline">Log Out</a></li>
+                                <?php } else { ?>
+                                    <li><a href="../pages/account.php" class="text-blue-500 hover:underline">My Account</a></li>
+                                    <li><a href="../pages/orders.php" class="text-blue-500 hover:underline">My Orders</a></li>
+                                    <li><a href="../functions/userLogout.php" class="text-red-500 hover:underline">Log Out</a></li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
+                </div>
 
+                <!-- Cart Icon -->
+                <div class="dropdown relative">
+                    <button >
+                        <a href="<?php echo basename(dirname($_SERVER['PHP_SELF'])) === 'ip1' ? 'pages/cart.php' : '../pages/cart.php'; ?>">
+                        <img src="<?php echo basename(dirname($_SERVER['PHP_SELF'])) === 'ip1' ? 'img/icons/shopping_cart.png' : '../img/icons/shopping_cart.png'; ?>" 
+                        class="w-6 h-6 sm:w-5 sm:h-5 cursor-pointer hover:scale-110 transition-transform duration-200" alt="Cart">
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu-bar mt-4">
+            <div class="menu">
+                <ul class="flex space-x-4">
+                    <?php if (basename(dirname($_SERVER['PHP_SELF'])) === "ip1") { ?>
+                        <li><a href="index.php" class="text-blue-500 hover:underline">HOME</a></li>
+                        <li><a href="pages/market.php" class="text-blue-500 hover:underline">Market</a></li>
+                        <li><a href="pages/register.php" class="text-blue-500 hover:underline">Register</a></li>
+                        <?php if (!isset($_SESSION['logged_in'])) { ?>
+                            <li><a href="pages/login.php" class="text-blue-500 hover:underline">SIGN IN</a></li>
+                        <?php } ?>
+                    <?php } else { ?>
+                        <li><a href="../index.php" class="text-blue-500 hover:underline">HOME</a></li>
+                        <li><a href="../pages/market.php" class="text-blue-500 hover:underline">Market</a></li>
+                        <li><a href="../pages/register.php" class="text-blue-500 hover:underline">Register</a></li>
+                        <?php if (!isset($_SESSION['logged_in'])) { ?>
+                            <li><a href="../pages/login.php" class="text-blue-500 hover:underline">SIGN IN</a></li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
-            <div class="search-bar">
-                <form action="<?php if (basename(dirname($_SERVER['PHP_SELF'])) === "ip1") { ?>pages/market.php<?php }
-                                else { ?> market.php<?php } ?>" method="get">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="search" id="searchInput" placeholder="Search">
-                        <button type="submit" name="submit" style="background: none; border: none; padding: 0;">
-                            <?php if (basename(dirname($_SERVER['PHP_SELF'])) === "ip1") { ?>
-                                <img src="img/icons/search.png" id="searchIcon" alt="Search">
-                            <?php } else { ?>
-                                <img src="../img/icons/search.png" id="searchIcon" alt="Search">
-                            <?php } ?>
-                        </button>
-                    </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar mt-4">
+                <form action="<?php echo basename(dirname($_SERVER['PHP_SELF'])) === 'ip1' ? 'pages/market.php' : '../pages/market.php'; ?>" 
+                    method="get" class="flex items-center space-x-2">
+                    <input type="text" class="form-control border border-gray-300 rounded-md p-2 w-full" 
+                        name="search" id="searchInput" placeholder="Search">
+                    <button type="submit" name="submit" class="bg-blue-500 text-white p-2 rounded-md">
+                        <img src="<?php echo basename(dirname($_SERVER['PHP_SELF'])) === 'ip1' ? 'img/icons/search.png' : '../img/icons/search.png'; ?>" 
+                            class="w-4 h-4" alt="Search">
+                    </button>
                 </form>
             </div>
-        </div> <!-- menu -->
-    </div> <!-- container -->
-</header> <!-- header -->
-
+        </div>
+    </div>
+</header>
