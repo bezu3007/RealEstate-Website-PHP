@@ -1,15 +1,26 @@
-man = {
-  name: "Abebe",
-  age: 10,
-};
+// Example addition to index.js
 
-a = "abEbe yemane ";
-a = a.trim();
-log = console.log;
-log(a.length);
+// Function to display the current date and time
+function displayDateTime() {
+  const now = new Date();
+  console.log(`Current Date: ${now.toDateString()}`);
+  console.log(`Current Time: ${now.toLocaleTimeString()}`);
+}
 
-var today = new Date();
+// Event listener for DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Index.js is loaded and running!');
+  displayDateTime(); // Call the function when the page loads
+});
 
-log(today.toTimeString());
-log(today);
-log(Math.random().toPrecision(4))
+// Example of adding a utility function
+function calculateSquare(number) {
+  if (isNaN(number)) {
+    console.error('Invalid input: Not a number');
+    return null;
+  }
+  return number * number;
+}
+
+// Test the utility function
+console.log(`Square of 5: ${calculateSquare(5)}`);
